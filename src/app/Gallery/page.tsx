@@ -139,7 +139,7 @@ export default function Gallery() {
       <div
         style={{
           ...styles.banner,
-          ...(window.innerWidth <= 768 ? styles.mobileBanner : {}),
+        //  /* ...(window.innerWidth <= 768 ? styles.mobileBanner : {}),*/
         }}
       >
         <Image
@@ -154,7 +154,7 @@ export default function Gallery() {
       <h2
         style={{
           ...styles.heading,
-          ...(window.innerWidth <= 768 ? styles.mobileHeading : {}),
+          // ...(window.innerWidth <= 768 ? styles.mobileHeading : {}),
         }}
       >
         Have a look at my wonderful <span style={styles.vectorArts}>Vector Arts</span>
@@ -168,7 +168,7 @@ export default function Gallery() {
               key={index}
               style={{
                 ...styles.imageContainer,
-                ...(window.innerWidth <= 768 ? styles.mobileImageContainer : {}),
+                // ...(window.innerWidth <= 768 ? styles.mobileImageContainer : {}),
               }}
               onClick={() => openModal(index)}
               onMouseEnter={(e) => {
