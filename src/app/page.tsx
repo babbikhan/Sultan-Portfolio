@@ -7,11 +7,11 @@ import Router from 'next/router'; // Import Router for route change events
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import HeroSection from './component/HeroSection';
-import TestimonialSlider from './component/TestimonialSlider';
-import BeforeAfterSlider from './component/BeforeAfterSlider'; 
+import TestimonialSlider from './Component/TestimonialSlider';
+import BeforeAfterSlider from './Component/BeforeAfterSlider'; 
 import Newsletter from './Component/Newsletter'; 
-import Loader from './component/Loader'; // Import the Loader
+import Loader from './Component/Loader'; // Import the Loader
+import HeroSection from "./Component/Herosection"
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
