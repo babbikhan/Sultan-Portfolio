@@ -1,0 +1,219 @@
+/* Base Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #1F1F1F;
+  background-attachment: fixed; /* Lock background to prevent scrolling effect */
+  background-position: center; /* Center background */
+  max-width: 1520px; /* Restrict background width on large screens */
+  margin: 0 auto; /* Center section within viewport */
+  box-shadow: 0 1px 3px #C9F31D;
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+  width: 100%; /* Ensure full width for sticky behavior */
+  background-color: #1F1F1F; /* Ensure consistent background color */
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Section */
+.nav {
+  position: absolute;
+  left: 53%;
+  transform: translateX(-50%);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Space between navigation items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #C9F31D;
+}
+
+.galleryButton a {
+  text-decoration: none;
+  color: #000000;
+  background-color: #C9F31D;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.galleryButton a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Mobile Menu Toggle Button */
+.menuToggle {
+  display: none; /* Hide toggle button on larger screens */
+  font-size: 3rem; /* Size of the hamburger icon */
+  margin-top: -15px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sidebar Navigation Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0; /* Change to left */
+  height: 100%;
+  width: 260px; /* Width of the sidebar */
+  background-color: #1F1F1F; /* Same as header */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%); /* Initially hide sidebar off-screen */
+  transition: transform 0.3s ease-in-out;
+  z-index: 999; /* Ensure it appears above other content */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show sidebar when open */
+}
+
+.sidebarLogo {
+  display: flex;
+  justify-content: center;
+  padding: 2.1rem; /* Padding around the logo */
+  background-color: #414141;
+}
+
+/* Sidebar Navigation Items */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 1rem; /* Space inside each list item */
+  border-bottom: 0.5px solid #ffffff; /* Separator line */
+  text-align: left; /* Center align text */
+  padding-left: 20px;
+}
+
+.sidebar nav ul li:last-child {
+  border-bottom: none; /* Remove separator from last item */
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* Text color */
+  transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #ffffff; /* Hover color */
+}
+
+/* Responsive Adjustments for Mobile Screens */
+@media (max-width: 608px) {
+  .header {
+    padding: 1rem; /* Adjust header padding */
+    flex-direction: column; /* Stack items vertically */
+    position: sticky; /* Ensure header is sticky even on mobile */
+  }
+
+  .logo {
+    justify-content: flex-start; /* Align logo to the left */
+    width: 100%; /* Allow logo to take full width */
+  }
+
+  .nav {
+    display: none; /* Hide navigation by default on mobile */
+  }
+
+  .menuToggle {
+    display: block; /* Show toggle button on mobile */
+    position: absolute; /* Position it */
+    right: 20px; /* Align it to the right */
+  }
+
+  .nav.open {
+    display: flex; /* Show navigation when sidebar is open */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    gap: 1rem; /* Space between items */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    gap: 1rem; /* Space between items */
+    align-items: center; /* Center align items */
+  }
+
+  .nav a {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .galleryButton {
+    display: none; /* Remove gallery button for mobile */
+  }
+
+  /* Centering Stats Section for Mobile */
+  .stats {
+    width: 90%; /* Make stats container responsive */
+    margin: 20px auto; /* Center the stats container */
+    text-align: center; /* Center text within the stats */
+  }
+}
+
+/* iPhone 14 Plus-specific Responsive Adjustments */
+@media (max-width: 430px) {
+  .header {
+    padding: 1.1rem; /* Adjust header padding */
+  }
+
+  .nav {
+    margin-top: 1rem; /* Add margin at the top */
+  }
+
+  .nav a {
+    font-size: 0.85rem; /* Further adjust font size for iPhone 14 Plus */
+  }
+
+  /* Stats section adjustments for iPhone 14 Plus */
+  .stats {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the stats container */
+    text-align: center; /* Center text within the stats */
+  }
+}
+
+.closeButton {
+  font-size: 2rem; /* Size of the close icon */
+  color: #C9F31D; /* Color of the close icon */
+  background-color: #000000; /* Background color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make the background round */
+  width: 30px; /* Set width for round shape */
+  height: 30px; /* Set height for round shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: absolute; /* Position it absolutely */
+  top: 9px; /* Distance from the top */
+  right: 5px; /* Distance from the right */
+  transition: color 0.3s; /* Transition effect for hover */
+  display: flex; /* Center icon horizontally */
+  justify-content: center; /* Center icon vertically */
+  align-items: center; /* Center icon vertically */
+}

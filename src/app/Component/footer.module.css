@@ -1,0 +1,161 @@
+.footer {
+  background-color: #1a1a1a;
+  background-attachment: fixed;
+  background-position: center;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  flex: 1;
+  text-align: left;
+}
+
+.nav {
+  flex: 2;
+  text-align: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.navItem a:hover {
+  text-decoration: underline;
+  color: #C9F31D;
+}
+
+.navText {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  display: none;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  flex: 1;
+  align-items: center;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #C9F31D;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .nav {
+    flex: none;
+    margin-bottom: 20px;
+  }
+
+  .navList {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .socialIcons a {
+    font-size: 20px;
+  }
+
+  .footerBottom {
+    font-size: 13px;
+  }
+
+  .navText {
+    display: block;
+  }
+
+  .socialIconsHeading {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .socialIcons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: 769px) {
+    .socialIconsHeading {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .footer {
+    padding: 15px 10px;
+  }
+
+  .footerTop {
+    padding-bottom: 10px;
+  }
+
+  .navList {
+    gap: 10px;
+  }
+
+  .socialIcons a {
+    font-size: 20px;
+  }
+
+  .footerBottom {
+    font-size: 11px;
+  }
+}

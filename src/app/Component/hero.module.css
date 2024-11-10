@@ -1,0 +1,377 @@
+/* Hero Section CSS */
+.heroSection {
+  background-color: #131313;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 180px 100%;
+  background-attachment: fixed;
+  background-position: center;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 35px 30px;
+  text-align: center;
+  position: relative; 
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.leftSide {
+  flex: 1;
+  text-align: left;
+  margin-right: 150px;
+}
+
+.centerImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  padding-bottom: 10px;
+  transform: scale(1.1);
+  margin-left: -100px;
+}
+
+.title {
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #C9F31D;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 2.6rem;
+  margin: 10px 0;
+}
+
+.founder {
+  font-weight: bold;
+  font-size: 27px;
+  color: #C9F31D;
+}
+
+.description {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hireMeBtn {
+  background-color: #C9F31D;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative; 
+  z-index: 20; 
+}
+
+.hireMeBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border: 1px solid #C9F31D;
+  padding: 60px;
+  width: 260px;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #C9F31D;
+}
+
+.statText {
+  font-size: 1rem;
+  color: white;
+}
+
+.divider {
+  border-left: 150px solid #ffffff;
+  height: 2px;
+  margin: 20px 0;
+  display: block;
+}
+
+/* Governor Section Styles */
+.governorSection {
+  padding: 50px 0;
+  background-color: #1e1e1e;
+  background-attachment: fixed;
+  background-position: center;
+  max-width: 1520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.governorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  width: 100%;
+  gap: 40px;
+}
+
+.textContainer {
+  flex: 1;
+  color: #ffffff;
+  text-align: left;
+  max-width: 600px;
+}
+
+.governorTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d0f01b;
+}
+
+.course {
+  color: #FFFFFF;
+}
+
+.studentName {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.passed {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #FFFFFF;
+}
+
+.quarter {
+  color: #d0f01b;
+}
+
+.enrollment {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d0f01b;
+  margin-top: 20px;
+}
+
+.enroll {
+  color: #ffffff;
+}
+
+.profileContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.governorImg {
+  border-radius: 10px;
+  height: 420px;
+  width: 410px;
+}
+
+.tsBadge {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  background-color: #d0f01b;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 760px) {
+  .heroSection {
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftSide,
+  .rightSide {
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .centerImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 10px;
+    margin-left: 0;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .founder {
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  .stats {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    border: 1px solid #000000;
+  }
+
+  .governorSection {
+    padding: 20px;
+  }
+
+  .governorContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .profileContainer {
+    order: -1;
+  }
+
+  .textContainer {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .governorTitle {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: -310px;
+    padding-bottom: 330px;
+  }
+
+  .governorImg {
+    padding-top: 120px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.6);
+  }
+
+  .studentName {
+    font-size: 1rem;
+  }
+
+  .tsBadge {
+    position: absolute;
+    top: 95px;
+    right: -60px;
+    background-color: #d0f01b;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .passed {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #FFFFFF;
+  }
+
+  .quarter {
+    color: #d0f01b;
+  }
+
+  .enrollment {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d0f01b;
+    margin-top: -8px;
+  }
+
+  .enroll {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 430px) {
+  .heroSection {
+    padding: 10px;
+  }
+
+  .centerImage {
+    height: 300px;
+    padding-top: 40px;
+    transform: scale(1.1);
+  }
+
+  .title {
+    font-size: 1.8rem;
+    padding-top: 10px;
+  }
+
+  .subtitle {
+    font-size: 2.3rem;
+  }
+
+  .founder {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .hireMeBtn {
+    padding: 10px 30px;
+    font-size: 0.8rem;
+    z-index: 20; 
+    position: relative; 
+  }
+
+  .stats {
+    width: 130%;
+    padding: 30px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+    margin-left: -15%;
+    margin-right: -15%;
+  }
+
+  .governorSection {
+    padding: 10px;
+  }
+
+  .governorTitle {
+    font-size: 1.6rem;
+  }
+}
