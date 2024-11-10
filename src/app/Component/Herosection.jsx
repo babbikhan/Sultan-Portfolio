@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; // Import Link for navigation
-import styles from './Hero.module.css'; // Adjust the import path if needed
+import styles from './hero.module.css'; // Adjust the import path if needed
 
 export default function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
